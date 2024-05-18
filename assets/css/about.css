@@ -1,0 +1,363 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: #040404;
+    color: #fff;
+    position: relative;
+    background: transparent;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    background: #040404;
+    background-size: cover;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    z-index: -1;
+}
+
+@media (min-width: 1024px) {
+    body::before {
+        background-attachment: fixed;
+    }
+}
+
+a {
+    color: #18d26e;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #35e888;
+    text-decoration: none;
+}
+
+.coloring {
+    background-color: #0a1f3a;
+    color: #fff;
+    display: flex;
+}
+
+.navbaring {
+    font-size: 50px;
+    color: #fff;
+    font-weight: 700;
+    margin-left: 80px;
+}
+
+#navbar {
+    padding: 0;
+    margin-left: 900px;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.navbar a,
+.navbar a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding: 10px;
+    margin-left: 25px;
+    font-size: 23px;
+    font-weight: 400;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.navbar a:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #18d26e;
+    visibility: hidden;
+    width: 0px;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+    color: #18d26e;
+}
+
+a {
+    color: #18d26e;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #35e888;
+    text-decoration: none;
+}
+
+@keyframes animate-loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+
+section.section-show {
+    top: 100px;
+    bottom: auto;
+    opacity: 1;
+    padding-bottom: 45px;
+}
+
+@media (max-width: 768px) {
+    section {
+        top: 120px;
+    }
+    section.section-show {
+        top: 80px;
+    }
+}
+
+.section-title h2 {
+    font-size: 24px;
+    font-weight: 500;
+    padding: 0;
+    line-height: 1px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #aaaaaa;
+    font-family: "Poppins", sans-serif;
+    margin-top: 80px;
+    margin-left: 50px;
+}
+
+.section-title h2::after {
+    content: "";
+    width: 120px;
+    height: 1px;
+    display: inline-block;
+    background: #4ceb95;
+    margin: 4px 10px;
+}
+
+.section-title p {
+    font-size: 48px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+
+img {
+    width: 50%;
+    height: 50%;
+    margin-left: 160px;
+}
+
+.about-me .content h3 {
+    font-weight: 700;
+    font-size: 36px;
+    color: #18d26e;
+}
+
+.fst-italic {
+    color: #fff;
+    font-size: 20px;
+}
+
+.about-me .content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-me .content ul li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 25px;
+}
+
+.about-me .content ul strong {
+    margin-right: 10px;
+}
+
+.about-me .content ul i {
+    font-size: 16px;
+    margin-right: 5px;
+    color: #18d26e;
+    line-height: 0;
+}
+
+.about-me .content p:last-child {
+    margin-bottom: 0;
+}
+
+
+/*--------------------------------------------------------------
+# Counts
+--------------------------------------------------------------*/
+
+.counts {
+    padding: 60px 0 50px;
+    margin-left: 40px;
+}
+
+.counts .count-box {
+    padding: 20px 30px 25px 20px;
+    width: 90%;
+    position: relative;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.counts .count-box i {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    color: #18d26e;
+    border-radius: 50px;
+    line-height: 0;
+}
+
+.counts .count-box span {
+    font-size: 36px;
+    display: block;
+    font-weight: 600;
+    color: #fff;
+}
+
+.counts .count-box p {
+    padding: 0;
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    font-size: 24px;
+    color: #fff;
+}
+
+
+/*--------------------------------------------------------------
+# Skills
+--------------------------------------------------------------*/
+
+.skills {
+    margin-bottom: 50px;
+}
+
+.skills .progress {
+    height: 60px;
+    display: block;
+    background: none;
+    border-radius: 0;
+    margin-left: 80px;
+    width: 70%;
+}
+
+.section-title h2 {
+    font-size: 30px;
+    margin-bottom: 50px;
+    margin-left: 80px;
+}
+
+.progress {
+    margin-top: 25px;
+}
+
+.skills .progress .skill {
+    padding: 10px 0;
+    margin: 0;
+    text-transform: uppercase;
+    display: block;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+}
+
+.skill {
+    font-size: 20px;
+}
+
+.skills .progress .skill .val {
+    float: right;
+    font-style: normal;
+}
+
+.skills .progress-bar-wrap {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.skills .progress-bar {
+    width: 1px;
+    height: 10px;
+    transition: 0.9s;
+    background-color: #18d26e;
+}
+
+
+/*--------------------------------------------------------------
+# Interests
+--------------------------------------------------------------*/
+
+.interests .icon-box {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    transition: ease-in-out 0.3s;
+}
+
+.interests .icon-box i {
+    font-size: 32px;
+    padding-right: 10px;
+    line-height: 1;
+}
+
+.icon-box {
+    margin-left: 80px;
+    width: 80%;
+    margin-right: 20px;
+}
+
+.interests .icon-box h3 {
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-size: 22px;
+    color: #fff;
+}
+
+.interests .icon-box:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.interests {
+    margin-bottom: 150px;
+}
